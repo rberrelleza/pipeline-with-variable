@@ -12,7 +12,6 @@ jobs:
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
         url: ${{ secrets.OKTETO_URL }}
-        variables: NAME=preview 
 
     - name: Deploy preview environment
       uses: okteto/deploy-preview@latest
@@ -20,5 +19,6 @@ jobs:
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         name: pr-${{ github.event.number }}
+        variables: NAME=preview 
         scope: global
         timeout: 15m
