@@ -15,5 +15,5 @@ func main() {
 }
 
 func helloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hi %s!", os.Getenv("NAME"))
+	fmt.Fprintf(w, "Howdy %s!", os.Getenv("NAME"))
 }
